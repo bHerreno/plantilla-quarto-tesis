@@ -1,6 +1,6 @@
-[English below ↓](#doctoral-dissertation-template-with-quarto)
+[English below ↓](#doctoral-thesis-template-with-quarto)
 
-# Plantilla de disertación doctoral con Quarto
+# Plantilla de tesis doctoral con Quarto
 
 Este repositorio contiene una plantilla base para la elaboración de una tesis doctoral (o libro) utilizando [**Quarto**](https://quarto.org/). El objetivo principal es facilitar la estructura y el proceso de compilación, permitiendo centrarte en el contenido académico.
 
@@ -52,7 +52,7 @@ La estructura mínima de archivos es la siguiente:
 1.  **Clona este repositorio** o descárgalo como ZIP y descomprímelo.
 
     ``` bash
-    git clone https://github.com/bHerreno/plantilla-quarto-disertacion.git
+    git clone https://github.com/bHerreno/plantilla-quarto-tesis.git
     ```
 
 2.  **Edita los archivos `.qmd`** con tu contenido:
@@ -73,19 +73,40 @@ La estructura mínima de archivos es la siguiente:
 
 ### Vía Terminal (CLI)
 
-1.  Abre una terminal y navega a la carpeta del proyecto:
+ Abre una terminal, navega hasta la carpeta del proyecto (donde se encuentra el archivo `_quarto.yml`) y ejecuta los siguientes comandos según tus necesidades:
 
-    ``` bash
-    cd ruta/a/tu/proyecto
+    ```bash
+    # 1) Navega a la carpeta raíz del proyecto
+    cd /ruta/a/tu/proyecto
+    # Ejemplos:
+    #   macOS/Linux:  cd ~/repos/plantilla-quarto-tesis
+    #   Windows:      cd "C:\Users\TuUsuario\Documents\plantilla-quarto-tesis"
     ```
 
-2.  Ejecuta el comando de compilación:
-
-    ``` bash
+    ```bash
+    # 2) Renderiza el proyecto completo (detecta automáticamente _quarto.yml)
     quarto render
+    # equivale a:
+    # quarto render .
     ```
 
-    Esto generará un archivo PDF (u otro formato) en la misma carpeta.
+    ```bash
+    # 3) Renderiza un archivo específico (por ejemplo, un capítulo)
+    quarto render capitulo1.qmd
+    ```
+
+    ```bash
+    # 4) Fuerza un formato de salida (requiere LaTeX si eliges PDF)
+    quarto render --to pdf # Esto generará un archivo PDF (u otro formato) en la misma carpeta del proyecto.
+    quarto render --to html
+    quarto render --to epub
+    ```
+
+    ```bash
+    # 5) (Opcional) Comprueba la instalación y los requisitos
+    quarto check
+    ```
+
 
 ### Vía RStudio
 
@@ -121,7 +142,9 @@ Si encuentras errores o deseas contribuir con mejoras, por favor abre un *issue*
 
 ¡Disfruta escribiendo tu tesis con Quarto y ahorra tiempo en la maquetación!
 
-# Doctoral Dissertation Template with Quarto
+---
+
+# Doctoral Thesis Template with Quarto
 
 > **Note:** The examples and sample content are in **Spanish**, but they can be treated as *Lorem Ipsum* placeholders.
 
@@ -176,7 +199,7 @@ The main goal is to simplify the structure and compilation process, allowing you
 1. **Clone this repository** or download it as a ZIP and extract it.
 
    ```bash
-   git clone https://github.com/bHerreno/plantilla-quarto-disertacion.git
+   git clone https://github.com/bHerreno/plantilla-quarto-tesis.git
    ```
 
 2. **Edit the `.qmd` files** with your own content:
@@ -195,14 +218,41 @@ The main goal is to simplify the structure and compilation process, allowing you
 
 ## Rendering
 
-### Using the Command Line
+### Using the Terminal (CLI)
 
-```bash
-cd path/to/your/project
-quarto render
-```
+Open a terminal, navigate to the project folder (where the `_quarto.yml` file is located), and run the following commands as needed:
 
-This will generate a PDF (or another format) in the same folder.
+   ```bash
+   # 1) Navigate to the root folder of the project
+   cd /path/to/your/project
+   # Examples:
+   #   macOS/Linux:  cd ~/repos/quarto-thesis-template
+   #   Windows:      cd "C:\Users\YourUser\Documents\quarto-thesis-template"
+   ```
+
+   ```bash
+   # 2) Render the entire project (automatically detects _quarto.yml)
+   quarto render
+   # same as:
+   # quarto render .
+   ```
+
+   ```bash
+   # 3) Render a specific file (for example, a single chapter)
+   quarto render capitulo1.qmd
+   ```
+
+   ```bash
+   # 4) Force an output format (requires LaTeX if you choose PDF)
+   quarto render --to pdf # This will generate a PDF (or other format) in the same project folder.
+   quarto render --to html
+   quarto render --to epub
+   ```
+
+   ```bash
+   # 5) (Optional) Check installation and requirements
+   quarto check
+   ```
 
 ### Using RStudio
 
