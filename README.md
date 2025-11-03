@@ -1,4 +1,6 @@
-# Plantilla de Tesis Doctoral con Quarto
+[English below ↓](#doctoral-dissertation-template-with-quarto)
+
+# Plantilla de disertación doctoral con Quarto
 
 Este repositorio contiene una plantilla base para la elaboración de una tesis doctoral (o libro) utilizando [**Quarto**](https://quarto.org/). El objetivo principal es facilitar la estructura y el proceso de compilación, permitiendo centrarte en el contenido académico.
 
@@ -12,7 +14,7 @@ Este repositorio contiene una plantilla base para la elaboración de una tesis d
 
 ------------------------------------------------------------------------
 
-## Estructura del Proyecto
+## Estructura del proyecto
 
 La estructura mínima de archivos es la siguiente:
 
@@ -33,7 +35,7 @@ La estructura mínima de archivos es la siguiente:
 
 ------------------------------------------------------------------------
 
-## Requisitos Previos
+## Requisitos previos
 
 1.  **Quarto**: Descárgalo e instálalo desde [quarto.org](https://quarto.org).
 2.  **LaTeX**: Si deseas compilar a PDF, asegúrate de tener una distribución de LaTeX instalada:
@@ -45,12 +47,12 @@ La estructura mínima de archivos es la siguiente:
 
 ------------------------------------------------------------------------
 
-## Cómo Usar la Plantilla
+## Cómo usar la plantilla
 
 1.  **Clona este repositorio** o descárgalo como ZIP y descomprímelo.
 
     ``` bash
-    git clone https://github.com/usuario/plantilla-tesis-quarto.git
+    git clone https://github.com/bHerreno/plantilla-quarto-disertacion.git
     ```
 
 2.  **Edita los archivos `.qmd`** con tu contenido:
@@ -111,10 +113,125 @@ La estructura mínima de archivos es la siguiente:
 
 ------------------------------------------------------------------------
 
-## Contribuciones y Soporte
+## Contribuciones y soporte
 
 Si encuentras errores o deseas contribuir con mejoras, por favor abre un *issue* o envía un *pull request*. Toda sugerencia es bienvenida.
 
 ------------------------------------------------------------------------
 
 ¡Disfruta escribiendo tu tesis con Quarto y ahorra tiempo en la maquetación!
+
+# Doctoral Dissertation Template with Quarto
+
+> **Note:** The examples and sample content are in **Spanish**, but they can be treated as *Lorem Ipsum* placeholders.
+
+This repository provides a base template for writing a doctoral thesis (or a book) using [**Quarto**](https://quarto.org/).
+The main goal is to simplify the structure and compilation process, allowing you to focus on the academic content.
+
+------------------------------------------------------------------------
+
+## Objective
+
+* Provide an initial structure for writing a thesis or book in Quarto format.
+* Include sample `.qmd` files and a preconfigured `_quarto.yml` file.
+* Simplify the rendering process to PDF (or HTML/EPUB) with just a few commands.
+
+------------------------------------------------------------------------
+
+## Project Structure
+
+```
+├── _quarto.yml          # Main Quarto configuration
+├── index.qmd            # Base document or introduction
+├── prefacio.qmd         # Example of an unnumbered preface
+├── capitulo1.qmd        # Example of Chapter 1
+├── capitulo2.qmd        # Example of Chapter 2
+├── resultados.qmd       # Example of results section
+├── referencias.qmd      # Optional separate references section
+├── referencias.bib      # Bibliography file
+├── estilo-citas.csl     # (Optional) Citation style
+└── README.md            # This file
+```
+
+> Note: You can rename or add other chapters or sections according to your own structure.
+
+------------------------------------------------------------------------
+
+## Requirements
+
+1. **Quarto**: Download and install from [quarto.org](https://quarto.org).
+2. **LaTeX**: To compile to PDF, make sure you have a LaTeX distribution installed:
+
+   * [TeX Live](https://www.tug.org/texlive/)
+   * [MiKTeX](https://miktex.org/)
+   * [TinyTeX](https://yihui.org/tinytex/) (installable directly from R).
+3. (Optional) **R and RStudio**:
+
+   * For a complete workflow, use [RStudio](https://posit.co/products/open-source/rstudio/) with Quarto integration.
+
+------------------------------------------------------------------------
+
+## How to Use the Template
+
+1. **Clone this repository** or download it as a ZIP and extract it.
+
+   ```bash
+   git clone https://github.com/bHerreno/plantilla-quarto-disertacion.git
+   ```
+
+2. **Edit the `.qmd` files** with your own content:
+
+   * `index.qmd` can serve as the cover or introduction.
+   * `prefacio.qmd` is set as an unnumbered section.
+   * `capitulo1.qmd`, `capitulo2.qmd`, etc., can be chapters with academic content.
+
+3. **Adjust the configuration** in `_quarto.yml`:
+
+   * Title, author, date, and chapter structure.
+   * Output format (PDF, HTML, EPUB).
+   * Update the bibliography (`bibliography`) and citation style (`csl`) if needed.
+
+------------------------------------------------------------------------
+
+## Rendering
+
+### Using the Command Line
+
+```bash
+cd path/to/your/project
+quarto render
+```
+
+This will generate a PDF (or another format) in the same folder.
+
+### Using RStudio
+
+1. Open RStudio and select `File > Open Project`.
+2. Make sure Quarto is installed (`system("quarto --version")`).
+3. Click **Render** or run in the console:
+
+   ```r
+   quarto::quarto_render()
+   ```
+
+------------------------------------------------------------------------
+
+## Customization
+
+* **Cover Page**: Modify `index.qmd` or create a new `.qmd` file for a custom cover.
+* **Dedications and Acknowledgments**: Add unnumbered sections (`.unnumbered`) or include them in `prefacio.qmd`.
+* **Style and Format**: Adjust parameters in `_quarto.yml`, e.g.:
+
+  * `fontsize`, `papersize`, `geometry`, `classoption`, etc.
+* **References and Bibliography**:
+
+  * Update `bibliography: referencias.bib` with your own references.
+  * Use `[@referenceName]` in the text to cite.
+
+------------------------------------------------------------------------
+## Contributions and Support
+
+If you find any issues or wish to suggest improvements, feel free to open an *issue* or submit a *pull request*. All contributions are welcome.
+
+
+Enjoy writing your thesis with Quarto — and save time on formatting!
